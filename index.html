@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD Xhtml 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/barmenu.css">
+    <style>
+        * {
+            padding:0;
+            margin:0;
+        }
+        body{
+            font-size:9pt;
+        
+        }
+        #barMenu1 {
+            position:relative;
+            
+            left:100px;
+            top:100px;
+            width:700px;
+        }
+    </style>
+    
+    <script src="../libs/jquery-1.11.0.min.js"></script>
+    <script src="../libs/jquery.easing.1.3.js"></script>
+    <script src="five.js"></script>
+</head>
+
+<body>  
+
+    <div class="bar-menu" id="barMenu"> 
+    
+        <ul class="menu-body">
+            <li>웹동네 홈</li>
+            <li>정보공유 세미나</li>
+            <li>기업/단체강의</li>
+        </ul>
+        
+        
+        <div class="bar"> </div>
+
+    </div>
+    <div class="bar-menu" id="barMenu1"> 
+    
+        <ul class="menu-body1">
+            <li>웹동네 홈1</li>
+            <li>정보공유 세미나1</li>
+            <li>기업/단체강의1</li>
+        </ul>
+        
+        
+        <div class="bar1"> </div>
+
+    </div>
+    <script>
+        $(document).ready(function(){
+            var parent = $(".menu-body");
+            var bar = $(".bar");
+            var moveBar = new MoveBar(parent, bar);
+            moveBar.set(1);
+        });
+</script>
+</body>
+</html>
